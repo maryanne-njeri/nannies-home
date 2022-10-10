@@ -52,7 +52,7 @@ function NavBar() {
                 </div>
             </div>
             <div className='flex items-center justify-center'>
-                <div className='bg-white h-32 w-3/4 shadow-hero-search rounded absolute -bottom-16'>
+                <div className='bg-white h-32 w-3/4 shadow-hero-search rounded-md absolute -bottom-16'>
                     <div className='flex items-center justify-center space-x-20 h-32'>
                         <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
                             <span>Gender</span>                            

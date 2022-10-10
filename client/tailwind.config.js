@@ -18,6 +18,11 @@ module.exports = {
 
             backgroundImage: {
                 'hero-image': "url('/public/heroImage.jpg')",
+                'home-image': "url('/public/homeImage.jpg')",
+                'first-user': "url('/public/user1.jpg')",
+                'second-user': "url('/public/user2.jpg')",
+                'third-user': "url('/public/user3.jpg')",
+                'fourth-user': "url('/public/user4.jpg')",
             },
 
             boxShadow: {
