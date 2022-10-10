@@ -10,10 +10,11 @@ function NavBar() {
     }
 
     return (
-        <div className='bg-hero-image w-full bg-cover bg-center h-96'>
-            <div className='bg-light-brown bg-opacity-50'>
+        <div className='bg-hero-image w-full bg-cover bg-center h-96 relative'>
+            <div className='fixed w-full bg-light-brown bg-opacity-50'>
                 <div className='flex items-center justify-between mx-4 xl:max-w-7xl xl:mx-auto font-averia py-3 text-white'>
                     <div className='flex space-x-2 items-center text-2xl font-large'>
+                        {/* Nannies Home Logo */}
                         <NavLink to="/" className='flex items-center trasition duration-150 ease-linear hover:text-pink-300' title='Nannies Home'>
                             <span>N</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -22,13 +23,18 @@ function NavBar() {
                             <span>H</span>
                         </NavLink>
                     </div>
+
+                    {/* Large screen size */}
                     <div className='hidden lg:block text-lg space-x-10'>
                         <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
                         <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
                         <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                         <NavLink to="/logout" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                     </div>
+
+                    {/* Small Screen Size - Responsiveness */}
                     <div className='block lg:hidden text-lg'>
+                        {/* Hamberger Menu */}
                         <button onClick={ handleToggle }>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -41,6 +47,38 @@ function NavBar() {
                                 <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                                 <NavLink to="/logout" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='flex items-center justify-center'>
+                <div className='bg-white h-32 w-3/4 shadow-hero-search rounded absolute -bottom-16'>
+                    <div className='flex items-center justify-center space-x-20 h-32'>
+                        <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
+                            <span>Gender</span>                            
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
+                            <span>Age</span>                            
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
+                            <span>Billing Rate</span>                            
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div className=''>
+                            <button type='submit' title="Search nanny" className='flex items-center space-x-2 text-gray-500'>
+                                <span>Search...</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
