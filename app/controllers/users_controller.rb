@@ -1,20 +1,51 @@
 class UsersController < ApplicationController
+    skip_before_action :authorized, only: :create
 
     def index
         user = User.all 
         render json: user
     end
 
-    def show 
-        user = User.find(params[:id])
-        render json: user
+    # def show 
+    #     user = User.find(params[:id])
+    #     render json: user
+    # end
+
+    # def show 
+    #     user = User.find_by(user_id: session[:user_id])
+    #     if user 
+    #         render json: user
+    #     else
+    #         render json: { error: "Not authorized" }, status: :unauthorized
+    #     end
+    # end
+
+
+    # def create 
+    #     # byebug
+    #     user = User.create(user_params)
+    #     render json: user, status: :created
+    # end
+
+    def create
+        # user = User.create!(user_params)
+        user = User.new(user_params)
+        if user.valid? && params[:password] == params[:password_confirmation]
+            user.save!
+            session[:user_id] = user.id
+            render json: user, status: :created
+        else
+            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
-
-    def create 
-        # byebug
-        user = User.create(user_params)
-        render json: user, status: :created
+    def show
+        if session[:user_id]
+            user = User.find(session[:user_id])
+            render json: user
+        else
+            render json: { error: "Not authorized" }, status: :unauthorized
+        end
     end
 
     def update
@@ -37,7 +68,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:username, :password)
+        params.permit(:username, :password, :password_confirmation)
     end
 
     def response_not_found

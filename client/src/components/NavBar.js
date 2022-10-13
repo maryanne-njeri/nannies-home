@@ -4,9 +4,14 @@ import { NavLink } from 'react-router-dom';
 function NavBar() {
 
     const [toggleMenu, setToggleMenu] = useState('');
+    const [showHideDropdown, setShowHideDropdown] = useState('')
 
     function handleToggle() {
         setToggleMenu(!toggleMenu);
+    }
+
+    function handleDropdown() {
+        setShowHideDropdown(!showHideDropdown);
     }
 
     return (
@@ -29,7 +34,7 @@ function NavBar() {
                         <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
                         <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
                         <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
-                        <NavLink to="/logout" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
+                        <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                     </div>
 
                     {/* Small Screen Size - Responsiveness */}
@@ -45,36 +50,66 @@ function NavBar() {
                                 <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
                                 <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
                                 <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
-                                <NavLink to="/logout" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
+                                <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Section-one */}
             <div className='flex items-center justify-center'>
-                <div className='bg-white h-32 w-3/4 shadow-hero-search rounded-md absolute -bottom-16'>
+                <div className='bg-white h-32 w-3/4 shadow-hero-search rounded-md absolute -bottom-16 z-10'>
                     <div className='flex items-center justify-center space-x-20 h-32'>
                         <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
-                            <span>Gender</span>                            
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <span>Gender</span>  
+                            <button onClick={ handleDropdown }>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                            <div className={ showHideDropdown ? "block" : "hidden" }>
+                                <ul class=' flex flex-col'>
+                                    <li class='cursor-pointer text-gray-700'>Male</li>
+                                    <li class='cursor-pointer text-gray-700'>Female</li>
+                                </ul>                         
+                            </div>
                         </div>
                         <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
-                            <span>Age</span>                            
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <span>Age</span> 
+                            <button onClick={ handleDropdown }>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button> 
+                            <button className={ showHideDropdown ? "block" : "hidden" }>
+                                <ul class='hidden flex flex-col'>
+                                    <li class='cursor-pointer text-gray-700'>30</li>
+                                    <li class='cursor-pointer text-gray-700'>32</li>
+                                    <li class='cursor-pointer text-gray-700'>36</li>
+                                    <li class='cursor-pointer text-gray-700'>34</li>
+                                </ul>                            
+                            </button>
                         </div>
                         <div className='flex items-center space-x-2 border px-4 py-2 rounded-lg shadow cursor-pointer'>
-                            <span>Billing Rate</span>                            
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                            </svg>
+                            <span>Billing Rate</span> 
+                            <button onClick={ handleDropdown }>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-500">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </button>
+                            <div className={ showHideDropdown ? "block" : "hidden" }>
+                                <ul class='hidden flex flex-col'>
+                                    <li class='cursor-pointer text-gray-700'>300</li>
+                                    <li class='cursor-pointer text-gray-700'>200</li>
+                                    <li class='cursor-pointer text-gray-700'>500</li>
+                                    <li class='cursor-pointer text-gray-700'>100</li>
+                                </ul>                            
+                            </div>
                         </div>
                         <div className=''>
                             <button type='submit' title="Search nanny" className='flex items-center space-x-2 text-gray-500'>
-                                <span>Search...</span>
+                                <span>Search</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
