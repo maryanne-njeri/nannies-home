@@ -6,6 +6,7 @@ import About from "./About";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
+import Profile from './Profile';
 // import SignUp from './SignUp';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
   
   return (
-    <div className="">
+    <div className="font-nunito">
 
       
       {/* if (user) {
@@ -39,6 +40,10 @@ function App() {
           <About />
         </Route>
 
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
+
         <Route exact path="/login">
           <Login setUser = {setUser} />
         </Route>
@@ -52,6 +57,11 @@ function App() {
         </Route>
         
       </Switch>
+      <div className="flex items-center bg-light-brown h-32">
+        <div className="max-w-[79rem] mx-auto">
+            <h2 className="text-white">&copy; 2022 Nannies Home, All Rights Reserved.</h2>
+        </div>
+      </div>
     </div>
   );
 }

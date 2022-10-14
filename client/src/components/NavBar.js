@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function NavBar() {
 
@@ -16,7 +17,7 @@ function NavBar() {
 
     return (
         <div className='bg-hero-image w-full bg-cover bg-center h-96 relative'>
-            <div className='fixed w-full bg-light-brown bg-opacity-50'>
+            <div className='fixed w-full bg-light-brown bg-opacity-50 z-40'>
                 <div className='flex items-center justify-between mx-4 xl:max-w-7xl xl:mx-auto font-averia py-3 text-white'>
                     <div className='flex space-x-2 items-center text-2xl font-large'>
                         {/* Nannies Home Logo */}
