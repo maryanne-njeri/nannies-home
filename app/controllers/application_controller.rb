@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
     
     include ActionController::Cookies
 
-    before_action :authorized
+    before_action :authorized , only: [:create]
 
     def authorized
         return render json: {error: "Not Authorized"}, status: :unauthorized unless session.include? :user_id
