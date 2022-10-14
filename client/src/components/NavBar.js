@@ -33,7 +33,7 @@ function NavBar() {
                     {/* Large screen size */}
                     <div className='hidden lg:block text-lg space-x-10'>
                         <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
-                        <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
+                        {/* <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink> */}
                         <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                         <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                     </div>
@@ -49,7 +49,7 @@ function NavBar() {
                         <div className={ toggleMenu ? "block" : "hidden" }>
                             <div className='text-lg flex flex-col absolute left-0 top-[3.48rem] px-4 bg-light-brown bg-opacity-50 w-full space-y-4 pb-6'>
                                 <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
-                                <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
+                                {/* <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink> */}
                                 <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                                 <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                             </div>

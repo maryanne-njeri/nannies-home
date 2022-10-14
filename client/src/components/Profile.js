@@ -42,6 +42,9 @@ function Profile() {
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu rhoncus tellus. Cras et aliquet sapien. Morbi efficitur viverra turpis, a mollis sem convallis eget. Morbi urna metus, aliquam eu ultrices in, vestibulum a ligula. Sed ac libero eu lacus iaculis elementum sed in sem. Aenean tempus lorem vel ipsum efficitur cursus. Phasellus laoreet est vitae mi consequat ultricies. Praesent posuere massa purus, id posuere libero mattis rutrum.</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu rhoncus tellus. Cras et aliquet sapien. Morbi efficitur viverra turpis, a mollis sem convallis eget. Morbi urna metus, aliquam eu ultrices in, vestibulum a ligula. Sed ac libero eu lacus iaculis elementum sed in sem. Aenean tempus lorem vel ipsum efficitur cursus. Phasellus laoreet est vitae mi consequat ultricies. Praesent posuere massa purus, id posuere libero mattis rutrum.</p>
                             </div>
+                            <div className="">
+                                <button className="bg-pink-500 px-4 rounded-md py-2 text-white font-bold">Book</button>
+                            </div>
                         </div>
                     </div>
                     <div class="w-2/5">

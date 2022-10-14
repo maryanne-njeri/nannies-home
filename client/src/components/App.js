@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
-import About from "./About";
+// import About from "./About";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
@@ -36,9 +36,9 @@ function App() {
 
       <NavBar />
       <Switch>
-        <Route exact path="/about">
+        {/* <Route exact path="/about">
           <About />
-        </Route>
+        </Route> */}
 
         <Route exact path="/profile">
           <Profile />
