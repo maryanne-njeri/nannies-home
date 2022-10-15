@@ -16,7 +16,7 @@ class PersonnelsController < ApplicationController
         personnel = Personnel.create(personnel_params)
         render json: personnel, status: :created
     end
-
+    
     def update
         personnel = find_personnel
         personnel.update!(personnel_params)
@@ -30,7 +30,7 @@ class PersonnelsController < ApplicationController
     end
 
 
-        private
+    private
 
     def find_personnel 
         Personnel.find(params[:id])

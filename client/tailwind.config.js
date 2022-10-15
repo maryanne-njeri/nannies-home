@@ -24,6 +24,7 @@ module.exports = {
                 'second-user': "url('/public/user2.jpg')",
                 'third-user': "url('/public/user3.jpg')",
                 'fourth-user': "url('/public/user4.jpg')",
+                'register-user': "url('/public/register.svg')",
             },
 
             boxShadow: {

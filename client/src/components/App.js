@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
-import About from "./About";
+// import About from "./About";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
@@ -35,8 +35,12 @@ function App() {
 
       <NavBar />
       <Switch>
-        <Route exact path="/about">
+        {/* <Route exact path="/about">
           <About />
+        </Route> */}
+
+        <Route exact path="/profile">
+          <Profile />
         </Route>
 
         <Route exact path="/login">
@@ -52,6 +56,11 @@ function App() {
         </Route>
         
       </Switch>
+      <div className="flex items-center bg-light-brown h-32">
+        <div className="max-w-[79rem] mx-auto">
+            <h2 className="text-white">&copy; 2022 Nannies Home, All Rights Reserved.</h2>
+        </div>
+      </div>
     </div>
   );
 }

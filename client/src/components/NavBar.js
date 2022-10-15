@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 function NavBar() {
 
@@ -16,7 +17,7 @@ function NavBar() {
 
     return (
         <div className='bg-hero-image w-full bg-cover bg-center h-96 relative'>
-            <div className='fixed w-full bg-light-brown bg-opacity-50'>
+            <div className='fixed w-full bg-light-brown bg-opacity-50 z-40'>
                 <div className='flex items-center justify-between mx-4 xl:max-w-7xl xl:mx-auto font-averia py-3 text-white'>
                     <div className='flex space-x-2 items-center text-2xl font-large'>
                         {/* Nannies Home Logo */}
@@ -32,7 +33,7 @@ function NavBar() {
                     {/* Large screen size */}
                     <div className='hidden lg:block text-lg space-x-10'>
                         <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
-                        <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
+                        {/* <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink> */}
                         <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                         <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                     </div>
@@ -48,7 +49,7 @@ function NavBar() {
                         <div className={ toggleMenu ? "block" : "hidden" }>
                             <div className='text-lg flex flex-col absolute left-0 top-[3.48rem] px-4 bg-light-brown bg-opacity-50 w-full space-y-4 pb-6'>
                                 <NavLink to="/" exact className='trasition duration-150 ease-linear hover:text-pink-300'>Home</NavLink>
-                                <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink>
+                                {/* <NavLink to="/about" exact className='trasition duration-150 ease-linear hover:text-pink-300'>About</NavLink> */}
                                 <NavLink to="/login" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign In</NavLink>
                                 <NavLink to="/signup" exact className="trasition duration-150 ease-linear hover:text-pink-300">Sign Up</NavLink>
                             </div>
