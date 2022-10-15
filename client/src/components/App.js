@@ -1,14 +1,38 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
-import Blog from "./Blog";
+import SignUp from "./SignUp";
 import NavBar from "./NavBar";
+// import SignUp from './SignUp';
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
+
+  
   return (
     <div className="">
+
+      
+      {/* if (user) {
+        return <h2>Welcome, {user.username}!</h2>;
+      } else {
+        return <Login onLogin={setUser} />;
+      } */}
+
+
+
       <NavBar />
       <Switch>
         <Route exact path="/about">
@@ -16,11 +40,11 @@ function App() {
         </Route>
 
         <Route exact path="/login">
-          <Login />
+          <Login setUser = {setUser} />
         </Route>
 
-        <Route exact path="/blog">
-          <Blog />
+        <Route exact path="/signup">
+          <SignUp />
         </Route>
 
         <Route exact path="/">

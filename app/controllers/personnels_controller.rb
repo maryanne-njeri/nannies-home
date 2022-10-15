@@ -8,10 +8,10 @@ class PersonnelsController < ApplicationController
 
     def show 
         personnel = Personnel.find(params[:id])
-        render json: personnel
+        render json: personnel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
     end
 
-    def create 
+    def create
         # byebug
         personnel = Personnel.create(personnel_params)
         render json: personnel, status: :created
@@ -30,7 +30,7 @@ class PersonnelsController < ApplicationController
     end
 
 
-    private
+        private
 
     def find_personnel 
         Personnel.find(params[:id])

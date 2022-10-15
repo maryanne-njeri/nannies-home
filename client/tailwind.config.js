@@ -9,6 +9,7 @@ module.exports = {
             fontFamily: {
                 'averia': ['Averia Serif Libre'],
                 'nunito': ['Nunito'],
+                'aref': ['Aref+Ruqaa'],
             },
 
             colors: {
