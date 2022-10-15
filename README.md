@@ -1,24 +1,27 @@
-# README
+# Project Name
+> Health Online
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Author Name
+> **Rosemary Njeri**, Access student program, Class MPFT 59-63
 
-Things you may want to cover:
+# Description
 
-* Ruby version
+> Objectives
 
-* System dependencies
+- [X] Does the project work functionally achieving the expected objectives i.e. GET and POST with API.
+- [X] Commits are made regularly with clear messages associated with them.
+- [X] This criterion is linked to a Learning Outcome The entire app runs on a single page with NO redirects.
+- [X] Project contains a well-designed landing with ease of navigation.
+- [X] This criterion is linked to a Learning Outcome Follows good coding practices.
 
-* Configuration
+# Project setup instructions
 
-* Database creation
+- To use this project,
+- You need to clone this repository to your local computer,
+- In your terminal, navigate to the directory you cloned the this project,
+- Find the index.html, and load it in the browser.
 
-* Database initialization
+- The Images are located in the public directory within the project
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Languages
+- This project uses HTML, Tailwindcss (CSS Framework) and ReactJs
