@@ -22,12 +22,12 @@ class SessionsController < ApplicationController
 
 
     def destroy
-        if session[:user_id]
-            session.delete :user_id
-            head :no_content
-        else
-            render json: { errors: []}, status: :unauthorized
-        end
+    if session[:user_id]
+        session.delete :user_id
+        head :no_content
+    else
+        render json: { errors: []}, status: :unauthorized
+    end
     end
 
 end
