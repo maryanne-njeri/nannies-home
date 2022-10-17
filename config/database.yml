@@ -22,5 +22,5 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
-  adapter: 'postgresql'
+  url: postgres://obtamtqxpasbse:662ccf0c3dffa11814b8fad181a71c7d20e768ce0e51e938ac50e4f715677a0b@ec2-44-199-9-102.compute-1.amazonaws.com:5432/d3g4k6qqp41lf2
+

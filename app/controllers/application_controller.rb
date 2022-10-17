@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
     include ActionController::Cookies
 
 rescue_from ActiveRecord::RecordInvalid, with: :not_processable_entity
-    before_action :authorize
+    before_action :authorized
 
     private
 

@@ -1,6 +1,6 @@
 class PersonnelsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    # skip_before_action :authorize, only: [:create, :index, :show, :update, :destroy]
+    # skip_before_action :authorized, only: [:create, :index, :show, :update, :destroy]
 
     def index 
         personnel = Personnel.all
